@@ -1,5 +1,8 @@
 import os, sys
-from ConfigParser import SafeConfigParser
+if sys.version_info.major >= 3:
+    from configparser import SafeConfigParser
+else:
+    from ConfigParser import SafeConfigParser
 
 # This dequote() business is required for some older versions
 # of mysql_config
